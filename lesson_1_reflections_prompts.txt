@@ -1,0 +1,55 @@
+How did viewing a diff between two versions of a file help you see the bug that
+was introduced?
+
+    You can compare the changes line by line.
+
+How could having easy access to the entire history of a file make you a more
+efficient programmer in the long term?
+
+    You don't need to keep every (old) file you ever worked on. You can just 
+    compare your last version with the version before and so you find changes 
+    which you can fix (if necessary).
+
+What do you think are the pros and cons of manually choosing when to create a
+commit, like you do in Git, vs having versions automatically saved, like Google
+docs does?
+
+    Pro: You can see the changes and compare them at once.
+    Con: It might be a bunch of work to compare line by line.
+
+Why do you think some version control systems, like Git, allow saving multiple
+files in one commit, while others, like Google Docs, treat each file separately?
+
+    One commit should depend on one logical change that is made within the files.
+    So it makes sense to have that all together in one commit.
+
+How can you use the commands git log and git diff to view the history of files?
+
+    First you use git log to find the commit ID you need.
+    To see the changes you can compare the commit (= commit2) with the previous one (= commit1, that is just underneath the commit not above): 
+    git diff commit1 commit2 (first argument = "original", second argument = "new" version; additions are lines present in the second argument but not the first)
+    commit1 = commit before the last commit
+    commit2 = last commit (commit with new changes)
+
+How might using version control make you more confident to make changes that
+could break something?
+
+    You can always be sure to skip back to a former version that worked well.
+
+Now that you have your workspace set up, what do you want to try using Git for?
+
+    Showing me the history of my files.
+
+
+
+    commit fa4c6bade4970c282b3870ad16f1bde8164663a9
+changing flattr link
+
+commit 708bcce690e5faa5739bd471507c102ea16b77f7
+pressing down arrow wont cause scroll down anymore
+
+commit 547f4171a82ec6429d002c1acef357aec41d3f17
+refactoring collision detection
+
+commit 71d52709ddc4066e7a79a1d0a412e43429a0cdeb
+removing old readme

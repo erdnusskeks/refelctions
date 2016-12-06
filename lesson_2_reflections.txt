@@ -1,0 +1,2 @@
+What happens when you initialize a repository? Why do you need to do it?
+A .git file will be created which will contain all the changes and makes the repository a real git repository.
