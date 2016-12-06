@@ -3,3 +3,6 @@ A .git file will be created which will contain all the changes and makes the rep
 
 How is the staging area different from the working directory and the repository? What value do you think it offers?
 It shows a stage between working directory and repository. You can add files that later on can be commited but you are also able to reset them from the staging area. So you can re-think what you are doing and maybe decide differently.
+
+How can you use the staging area to make sure you have one commit per logical change?
+You can use git diff --staged to check the changes. If you don't want them to be commit you are able to reset them.
