@@ -1,0 +1,30 @@
+NOTES
+=====
+
+How to unstage
+--------------
+
+(after "git add")
+git reset <file>
+
+
+What gets compared
+------------------
+
+git diff:									working directory <--> staging area
+git diff --staged:				staging area <--> commit 1 (= the recent commit)
+git diff commit1 commit2: commit 1 <--> commit2
+
+
+
+*******************************
+
+DENKE DRAN
+==========
+
+git pull
+
+Bin ich im richtigen Ordner?!
+
+git merge master 
+zeigt mir die Unterschiede an; danach einfach add, commit, push
