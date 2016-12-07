@@ -13,3 +13,8 @@ What are some situations when branches would be helpful in keeping your history 
 
 How do the diagrams help you visualize the branch structure?
 They can show which branches there are and where a branch starts.
+
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+We have only one branch with all the features, changes, bug fixes, etc. that were contained in both branches. 
+In the diagram, we show that the current commit has two parent commits: each last commit of branch1 and branch2.
+So you are able to view and work on every commit from both branches - now combined in just one branch.
