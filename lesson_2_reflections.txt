@@ -8,4 +8,4 @@ How can you use the staging area to make sure you have one commit per logical ch
 You can use git diff --staged to check the changes. If you don't want them to be commit you are able to reset them.
 
 What are some situations when branches would be helpful in keeping your history organized? How would branches help?
-- If you want to try out something new/experimental and you don't want to touch the master branch.
+- If you want to try out something new/experimental and you don't want to touch the master branch. --> context switch
