@@ -1,6 +1,8 @@
 NOTES
 =====
 
+HEAD = current commit
+
 How to unstage
 --------------
 
@@ -16,6 +18,15 @@ git diff --staged:				staging area <--> commit 1 (= the recent commit)
 git diff commit1 commit2: commit 1 <--> commit2
 
 
+
+Branching
+---------
+
+Creating a new branch:
+git checkout -b new-branch-name
+==> this contains two commands:
+git branch new-branch-name
+git checkout new-branch-name
 
 *******************************
 
