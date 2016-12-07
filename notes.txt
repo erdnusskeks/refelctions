@@ -1,26 +1,36 @@
-NOTES
-=====
+=========
+| NOTES |
+=========
 
 HEAD = current commit
 
-How to unstage
---------------
+git log
+=======
 
-(after "git add")
-git reset <file>
+git log --graph --oneline master branch1
+--> shows the branching of the two branches
 
 
-What gets compared
-------------------
+git diff 
+========
+(what gets compared)
 
 git diff:									working directory <--> staging area
 git diff --staged:				staging area <--> commit 1 (= the recent commit)
 git diff commit1 commit2: commit 1 <--> commit2
 
 
+git reset 
+=========
+(how to unstage)
+
+(after "git add")
+git reset <file>
+
+
 
 Branching
----------
+=========
 
 Creating a new branch:
 git checkout -b new-branch-name
@@ -28,10 +38,66 @@ git checkout -b new-branch-name
 git branch new-branch-name
 git checkout new-branch-name
 
+
+Merging
+=======
+
+git checkout branch1 
+git merge branch2
+==> branch1 will be included (merging always includes the branch I checked out before)
+
+I can also write:
+git merge branch1 branch2
+
+Since the two branches are merged, the order in which they are typed into the command line does not matter. The key is to remember that git merge always merges all the specified branches into the currently checked out branch, creating a new commit for that branch.
+--> Wenn ich also den Master in einen Branch mergen will, dann sollte ich vorher auch den den Branch auschecken!
+git checkout my_branch
+git merge master
+
+!!! Attention: 
+If I checkout branch3 just before merging it will also be included!
+
+
+git branch -d branch_name
+=========================
+
+Deletes the branch after merging. Only the "label" is deleted but not the commits because they are already within the master (thanks to merging!).
+
+
+Merge conflicts
+---------------
+
+To fix the conflicts follow these instructions:
+
+1. Restore your files to their state before you started the merge by running 
+	git merge --abort
+
+2. Double check the state of your files. If you run 
+	git log 
+while the master branch is checked out, you should see Caroline's "Add color" commit as the second-most-recent, and the most recent should be your commit fixing the bullet bug. If you use 
+	git diff 
+to compare your commit to Caroline's, your commit should introduce the line 
+this.delayBeforeBullet = 10; 
+on line 424. The line should be indented to the same level as the line below it using only spaces (no tabs), and the line should have no spaces after it.
+
+3. Once your file is in the correct state, create a new commit with your changes.
+
+4. Try the merge again.
+
+
+git show commit_id
+------------------
+(comparing a commit to its parent)
+
+The command Caroline mentions to compare a commit to its parent is 
+	git show commit_id
+
+
 *******************************
 
-DENKE DRAN
-==========
+==============
+| DENKE DRAN |
+==============
 
 git pull
 
