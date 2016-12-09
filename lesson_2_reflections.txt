@@ -18,3 +18,6 @@ What is the result of merging two branches together? Why do we represent it in t
 We have only one branch with all the features, changes, bug fixes, etc. that were contained in both branches. 
 In the diagram, we show that the current commit has two parent commits: each last commit of branch1 and branch2.
 So you are able to view and work on every commit from both branches - now combined in just one branch.
+
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+Git shows you where the conflicts are and combines the merging and the conflict solving in just one commit.
