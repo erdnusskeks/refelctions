@@ -11,4 +11,4 @@ Describe the differences between forks, clones, and branches. When would you use
 	- Branch: Trying things, doing experiments locally. I can push branches to GitHub and integrate them within the master branch.
 
 What is the benefit of having a copy of the last known state of the remote stored locally?
-	You are able to merge files if someone else has made changes that are already on GitHub without losing any files that were noch pushed yet. 
+	You are able to merge files if someone else has made changes that are already on GitHub without losing any files that were not yet pushed. 
